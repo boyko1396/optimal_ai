@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Optimal AI - Chat'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <main role="main" class="site__main">
+          <!-- chat-layout BEGIN -->
+          <div class="chat-layout">
+            <div class="chat-layout__container">
+              <div class="chat-layout__inner">
+                <!-- chat-aside BEGIN -->
+                @@include('html/components/chat-aside.html', {
+                  'el': 'chat-layout__aside'
+                })
+                <!-- chat-aside END -->
+                <div class="chat-main chat-layout__main">
+                  <div class="chat-main__inner">
+                    <header class="chat-main__header">
+                      <div class="chat-main__gpt-version">
+                        <div class="chat-main__gpt-version-row">
+                          <div class="chat-main__gpt-version-col">
+                            <button type="button" class="chat-main__gpt-version-btn is-active">GPT-3.5</button>
+                          </div>
+                          <div class="chat-main__gpt-version-col">
+                            <button type="button" class="chat-main__gpt-version-btn">GPT-4o</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="optimal-appeal optimal-appeal--theme-accent-light chat-main__optimal-appeal">
+                        <div class="optimal-appeal__inner">
+                          <div class="logo logo--size-sm optimal-appeal__logo">
+                            <svg width="58" height="24" viewBox="0 0 58 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__svg"><path class="logo__svg-dot" d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12Z" fill="#0057FF"/><path d="M55.5 24V0H58V24H55.5Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M38.9958 0L28 24H30.6459L40.2328 2.62356L49.8198 24H52.5L41.5042 0H38.9958ZM39.7174 1.47429L40.2328 2.62356L40.7482 1.47429H39.7174Z" fill="currentColor"/><path d="M40.7482 1.47429H39.7174L40.2328 2.62356L40.7482 1.47429Z" fill="currentColor"/></svg>
+                          </div>
+                          <div class="optimal-appeal__content">
+                            <div class="u-content optimal-appeal__text">
+                              <p>Привет, жаждущий исследователь! Приготовьтесь открыть для себя увлекательные открытия и расширить горизонты своего понимания.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+                    <footer class="chat-main__footer">
+                      <div class="chat-main__footer-hint-wrapper">
+                        <div class="chat-main__footer-hint">
+                          <button type="button" class="btn btn--size-md btn--theme-grey-outline chat-main__footer-hint-card">
+                            <span class="btn__inner">
+                              <span class="btn__title">Образование</span>
+                            </span>
+                          </button>
+                          <button type="button" class="btn btn--size-md btn--theme-grey-outline chat-main__footer-hint-card">
+                            <span class="btn__inner">
+                              <span class="btn__title">Бизнеса и Маркетинг</span>
+                            </span>
+                          </button>
+                          <button type="button" class="btn btn--size-md btn--theme-grey-outline chat-main__footer-hint-card">
+                            <span class="btn__inner">
+                              <span class="btn__title">Карьера</span>
+                            </span>
+                          </button>
+                          <button type="button" class="btn btn--size-md btn--theme-grey-outline chat-main__footer-hint-card">
+                            <span class="btn__inner">
+                              <span class="btn__title">Email</span>
+                            </span>
+                          </button>
+                          <button type="button" class="btn btn--size-md btn--theme-grey-outline chat-main__footer-hint-card">
+                            <span class="btn__inner">
+                              <span class="btn__title">Кнопка</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="chat-main__footer-form">
+                        <form action="#" class="chat-main__footer-form-el">
+                          <textarea name="message" rows="" cols="" class="u-textarea u-textarea--theme-white u-textarea--size-md chat-main__footer-form-textarea" placeholder="Напиши ваше сообщение"></textarea>
+                          <div class="chat-main__footer-form-aside">
+                            <p class="chat-main__footer-form-max-symbol">0/10000</p>
+                            <button type="button" class="btn-send btn-send--size-md btn-send--theme-accent chat-main__footer-form-btn-send" title="Отправить">
+                              <span class="btn-send__inner">
+                                <span class="visually-hidden btn-send__title">Отправить сообщение</span>
+                                <span class="btn-send__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#send"></use>
+                                  </svg>
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                                  </svg>
+                                </span>
+                              </span>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- chat-layout END -->
+        </main>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

@@ -1,0 +1,21 @@
+.target-audience {
+  padding: $rhythmLg13 0;
+  @media (max-width: $md) {
+    padding: 40rem 0;
+  }
+  &__container {
+  }
+  &__title {
+    margin-bottom: $rhythmLg2;
+    @media (max-width: $sm) {
+      margin-bottom: 24rem;
+    }
+  }
+  &__tab {
+    &-nav {
+      margin-bottom: var(--gap-fluid);
+    }
+    &-content {
+    }
+  }
+}

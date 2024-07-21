@@ -1,0 +1,32 @@
+.reviews {
+  padding: $rhythmLg13 0;
+  @media (max-width: $md) {
+    padding: 40rem 0;
+  }
+  &__container {
+  }
+  &__header {
+    margin-bottom: $rhythmLg2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: $sm) {
+      margin: 0 0 24rem;
+      align-items: flex-end;
+    }
+    &-title {
+      margin: 0;
+    }
+    &-slider-control {
+      flex-shrink: 0;
+    }
+  }
+  &__slider {
+    .swiper-slide {
+      height: initial;
+    }
+    &-card {
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.popup {
+  background: rgba($blackFullColor, .75);
+  backdrop-filter: blur(3px);
+  width: 100%;
+  width: 100vw;
+  padding: var(--gap-fluid);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: all .4s ease-in-out;
+  transition-property: visibility, opacity;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 2000;
+  &:not(.is-open) {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    .popup__content {
+      transform: translateY(-20vh);
+      opacity: 0;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+  }
+  &__content {
+    width: 100%;
+    max-width: 480rem;
+    margin: 0 auto;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    &--size {
+      &-sm {
+        max-width: 586rem;
+      }
+      &-md {
+        max-width: 996rem;
+      }
+    }
+    &--theme {
+      &-white {
+        background: $whiteColor;
+        color: $blackFullColor;
+        border-radius: $radiusMd;
+      }
+      &-grey {
+        background: $greyColor;
+        color: $blackFullColor;
+        border-radius: $radiusMd;
+      }
+    }
+  }
+  &__inner {
+    padding: $rhythmLg6 $rhythmLg12;
+  }
+  &__login {
+    &-row {
+      flex-wrap: nowrap;
+    }
+    &-col {
+      &--media {
+        max-width: 60%;
+        flex-basis: 60%;
+      }
+      &--content {
+        max-width: 40%;
+        flex-basis: 40%;
+      }
+    }
+    &-content {
+      height: 100%;
+      padding-right: $rhythmLg12;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $blackFullColor;
+    }
+  }
+  &__chat-form {
+    &-wrapper {
+    }
+    &-header {
+      margin-bottom: $rhythmLg8;
+    }
+    &-title {
+      margin: 0 0 $rhythmLg15;
+      font-weight: 600;
+      text-align: center;
+    }
+    &-subtitle {
+      margin: 0 0 $rhythmLg8;
+      text-align: center;
+    }
+    &-input {
+      margin-bottom: $rhythmLg14;
+    }
+    &-upload-file {
+      margin-bottom: $rhythmLg14;
+    }
+    &-message {
+    }
+    &-footer {
+      margin-top: $rhythmLg8;
+      display: flex;
+      justify-content: center;
+    }
+    &-btn {
+      min-width: 220rem;
+    }
+  }
+  &__form {
+    &-wrapper {
+      padding: $rhythmLg5 $rhythmLg6;
+    }
+    &-title {
+      margin: 0 0 $rhythmLg8;
+      font-weight: 600;
+    }
+    &-input {
+      margin: 0 0 $rhythmLg14;
+    }
+    &-footer {
+      max-width: 100%;
+      margin: $rhythmLg8 0 0 0;
+      display: table;
+    }
+    &-btn {
+      min-width: 220rem;
+      &-remove {
+        min-width: 104rem;
+      }
+      &-cancel {
+      }
+    }
+  }
+}

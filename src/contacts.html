@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Optimal AI - Contacts'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <!-- header BEGIN -->
+        @@include('html/components/header.html', {
+          'el': 'site__header'
+        })
+        <!-- header END -->
+        <main role="main" class="site__main">
+          <!-- page BEGIN -->
+          <section class="page">
+            <div class="container container--size-md page__container">
+              <div class="u-breadcrumbs page__breadcrumbs">
+                <ul class="u-breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/" itemprop="item">
+                      <span itemprop="name">Главная</span>
+                    </a>
+                    <meta itemprop="position" content="1">
+                  </li>
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Контакты</span>
+                    <meta itemprop="position" content="2">
+                  </li>
+                </ul>
+              </div>
+              <div class="contacts-block page__contacts">
+                <div class="row contacts-block__row">
+                  <div class="row__col--6 contacts-block__col contacts-block__col--content">
+                    <div class="bg-white padding-x-48 padding-y-40 radius-20 contacts-block__content">
+                      <h1 class="font-size-1 contacts-block__title">Контакты</h1>
+                      <div class="font-size-3 u-content contacts-block__text">
+                        <p>Если у вас есть вопросы или предложения, пожалуйста, заполните форму, и наша команда свяжется с вами в ближайшее время</p>
+                      </div>
+                      <form action="#" class="contacts-block__form">
+                        <div class="u-input contacts-block__form-input">
+                          <label class="u-input__label">
+                            <input type="text" name="name" class="u-input__el u-input__el--type-text u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Ваше имя">
+                          </label>
+                        </div>
+                        <div class="u-input contacts-block__form-input">
+                          <label class="u-input__label">
+                            <input type="email" name="email" class="u-input__el u-input__el--type-text u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="mail@example.com">
+                          </label>
+                        </div>
+                        <div class="u-input contacts-block__form-input">
+                          <label class="u-input__label">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="u-input__icon"><path d="M7.99992 19.9998C12.4182 19.9998 15.9998 16.4181 15.9998 11.9999C15.9998 7.58169 12.4182 4 7.99992 4C3.58169 4 0 7.58169 0 11.9999C0 16.4181 3.58169 19.9998 7.99992 19.9998Z" fill="#F0F0F0"/><path d="M15.5022 14.7821C15.8238 13.9154 15.9998 12.9781 15.9998 11.9995C15.9998 11.021 15.8238 10.0836 15.5022 9.21698H0.497589C0.176029 10.0836 0 11.021 0 11.9995C0 12.9781 0.176029 13.9154 0.497589 14.7821L7.99992 15.4777L15.5022 14.7821Z" fill="#0052B4"/><path d="M8.00038 19.9995C11.4401 19.9995 14.3724 17.8285 15.5027 14.7821H0.498047C1.62838 17.8285 4.56069 19.9995 8.00038 19.9995Z" fill="#D80027"/><path d="M23.2877 9.99994C23.5954 9.99994 23.7812 10.3403 23.6148 10.5991L20.8271 14.9355C20.674 15.1736 20.326 15.1736 20.1729 14.9355L17.3852 10.5991C17.2188 10.3403 17.4046 9.99994 17.7123 9.99994H23.2877Z" fill="black"/></svg>
+                            <input type="tel" name="phone" class="u-input__el u-input__el--type-icon u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="+7 (999) 999 99 99">
+                          </label>
+                        </div>
+                        <button type="submit" class="btn btn--size-lg btn--theme-accent contacts-block__form-btn">
+                          <span class="btn__inner">
+                            <span class="btn__title">Отправить</span>
+                          </span>
+                        </button>
+                      </form>
+                      <div class="u-content form-privacy contacts-block__privacy">
+                        <p>Нажимая на кнопку, вы соглашаетесь с нашими <a href="terms.html" target="_blank">Условиями использования</a> и&nbsp;<a href="privacy.html" target="_blank">Политикой конфиденциальности</a>.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row__col--6 contacts-block__col contacts-block__col--media">
+                    <picture class="radius-20 contacts-block__hero">
+                      <!--<source 
+                        srcset="images/contacts-block-hero-767.webp 1x, images/contacts-block-hero-767@2x.webp 2x" 
+                        type="image/webp" 
+                        media="(max-width: 767px)">-->
+                      <source 
+                        srcset="images/contacts-block-hero-767.jpg 1x, images/contacts-block-hero-767@2x.jpg 2x" 
+                        media="(max-width: 767px)">
+                      <!--<source 
+                        srcset="images/contacts-block-hero.webp 1x, images/contacts-block-hero@2x.webp 2x" 
+                        type="image/webp">-->
+                      <img 
+                        src="images/contacts-block-hero.jpg" 
+                        srcset="images/contacts-block-hero.jpg 1x, images/contacts-block-hero@2x.jpg 2x" 
+                        alt="Контакты">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- page END -->
+        </main>
+        <!-- footer BEGIN -->
+        @@include('html/components/footer.html', {
+          'el': 'site__footer'
+        })
+        <!-- footer END -->
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

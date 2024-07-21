@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Optimal AI - Restore'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <!-- login-page BEGIN -->
+        <section class="login-page">
+          <div class="container container--size-md login-page__container">
+            <div class="login-block login-page__block">
+              <div class="row login-block__row">
+                <div class="row__col--6 login-block__col login-block__col--media">
+                  <div class="login-block__media">
+                    <picture class="radius-20 login-block__hero">
+                      <!--<source 
+                        srcset="images/login-page-hero.webp 1x, images/login-page-hero@2x.webp 2x" 
+                        type="image/webp">-->
+                      <img 
+                        src="images/login-page-hero.jpg" 
+                        srcset="images/login-page-hero.jpg 1x, images/login-page-hero@2x.jpg 2x" 
+                        alt="Восстановление пароля">
+                    </picture>
+                    <div class="login-block__appeal">
+                      <div class="login-block__appeal-row">
+                        <div class="login-block__appeal-col login-block__appeal-col--12">
+                          <div class="login-block__appeal-card">
+                            <p class="font-size-2 login-block__appeal-card-title">12К+</p>
+                            <p class="font-size-4 login-block__appeal-card-subtitle">положительных оценок</p>
+                            <div class="u-rating login-block__appeal-card-rating" style="--rating-progress: 5"></div>
+                          </div>
+                        </div>
+                        <div class="login-block__appeal-col login-block__appeal-col--4">
+                          <div class="login-block__appeal-card">
+                            <p class="font-size-4 login-block__appeal-card-services">Генерируйте<br>тексты</p>
+                          </div>
+                        </div>
+                        <div class="login-block__appeal-col login-block__appeal-col--4">
+                          <div class="login-block__appeal-card">
+                            <p class="font-size-4 login-block__appeal-card-services">Создавайте<br>изображения</p>
+                          </div>
+                        </div>
+                        <div class="login-block__appeal-col login-block__appeal-col--4">
+                          <div class="login-block__appeal-card">
+                            <p class="font-size-4 login-block__appeal-card-services">Задавайте<br>любые вопросы</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row__col--6 login-block__col login-block__col--content">
+                  <div class="bg-white padding-x-48 padding-y-80 radius-20 login-block__content">
+                    <h1 class="font-size-2 login-block__title">Восстановление пароля</h1>
+                    <div class="u-content login-block__text">
+                      <p>Введите адрес электронной почты, который вы использовали при регистрации, и мы вышлем вам ссылку для сброса пароля.</p>
+                    </div>
+                    <form action="#" class="login-block__form">
+                      <div class="u-input login-block__form-input">
+                        <label class="u-input__label">
+                          <input type="email" name="email" class="u-input__el u-input__el--type-text u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Ваш e-mail">
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn--size-lg btn--theme-accent login-block__form-btn">
+                        <span class="btn__inner">
+                          <span class="btn__title">Отправить</span>
+                        </span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- login-page END -->
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

@@ -1,0 +1,38 @@
+.services {
+  padding: $rhythmLg13 0;
+  @media (max-width: $md) {
+    padding: 40rem 0;
+  }
+  &__container {
+  }
+  &__list {
+    &-card {
+      margin-bottom: var(--gap-fluid);
+      &:nth-child(even) {
+        .services-card__row {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+  &__appeal {
+    @media (max-width: $sm) {
+      padding: 32rem 16rem;
+    }
+    &-content {
+      text-align: center;
+    }
+    &-title {
+      margin-bottom: $rhythmLg4;
+    }
+    &-text {
+      margin-bottom: $rhythmLg8;
+      color: $greyColor;
+    }
+    &-footer {
+      &-btn {
+        min-width: 220rem;
+      }
+    }
+  }
+}

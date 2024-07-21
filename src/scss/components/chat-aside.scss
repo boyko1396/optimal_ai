@@ -1,0 +1,115 @@
+.chat-aside {
+  display: flex;
+  &__inner {
+    width: 100%;
+    padding: $rhythmLg12;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    @media (max-width: $lg) {
+      padding: 24rem 16rem;
+    }
+  }
+  &__header {
+    padding-bottom: $rhythmLg8;
+    display: flex;
+    flex-wrap: wrap;
+    &-logo {
+      margin-bottom: $rhythmLg17;
+    }
+    &-btn-new-chat {
+      width: 100%;
+      margin: 0 0 $rhythmLg12;
+      display: flex;
+    }
+    &-nav {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style-type: none;
+      &-item {
+        margin: 0;
+        padding: 0;
+      }
+      &-btn {
+        @extend %btn-reset;
+        width: 100%;
+        padding: 8rem 12rem;
+        display: block;
+        font-weight: bold;
+        font-size: var(--fs-5);
+        line-height: $lineHeight2;
+        color: $mediumGreyColor;
+        border-bottom: 1px solid transparent;
+        text-align: center;
+        transition: $transition;
+        cursor: pointer;
+        &:hover {
+          @media (min-width: $lg-mf) {
+            color: $blackColor;
+          }
+        }
+        &:focus,
+        &:active {
+        }
+        &.is-active {
+          color: $accentColor;
+          border-bottom-color: currentColor;
+        }
+      }
+    }
+    &-btn-close {
+      @extend %area-click, %btn-reset;
+      width: 30rem;
+      height: 30rem;
+      margin: -3rem 0 0 auto;
+      flex-shrink: 0;
+      color: $mediumGreyColor;
+      .u-icon {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+  }
+  &__body {
+    overflow-y: auto;
+    &::scrollbar {
+      display: none;
+    }
+    &-list {
+      &-card {
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: $rhythmLg7;
+        }
+      }
+    }
+  }
+  &__footer {
+    background: $whiteColor;
+    padding-top: $rhythmLg12;
+    &-nav {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      &-item {
+        margin: 0;
+        padding: 0;
+        &:not(:last-child) {
+          margin-bottom: $rhythmLg14;
+        }
+      }
+      &-btn {
+        width: 100%;
+        justify-content: flex-start;
+        &.is-active {
+          color: $accentColor;
+          .btn__icon {
+            color: $blackColor;
+          }
+        }
+      }
+    }
+  }
+}

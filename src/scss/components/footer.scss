@@ -1,0 +1,106 @@
+.footer {
+  background: $blackColor;
+  padding: $rhythmLg16 0;
+  font-size: var(--fs-5);
+  color: $whiteColor;
+  border-radius: $radiusMd $radiusMd 0 0;
+  position: relative;
+  @media (max-width: $lg) {
+    padding: 64rem 0;
+  }
+  &__container {
+  }
+  &__row {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    @media (max-width: $lg) {
+      flex-wrap: wrap;
+    }
+  }
+  &__col {
+    &--logo {
+      flex-shrink: 0;
+      @media (max-width: $lg) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+    &--nav {
+      flex-grow: 1;
+      @media (max-width: $lg) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+    &--action {
+      flex-shrink: 0;
+      @media (max-width: $lg) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+  &__logo {
+    @media (max-width: $lg) {
+      margin: 0 0 var(--gap-fluid);
+    }
+  }
+  &__nav {
+    padding: $rhythmLg14 24rem $rhythmLg14 $rhythmLg6;
+    font-weight: bold;
+    line-height: $lineHeight3;
+    @media (max-width: $lg) {
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+    &--theme {
+      &-white {
+      }
+      &-grey {
+        .footer__nav-link {
+          color: $silverColor;
+        }
+      }
+    }
+    &-list {
+      margin: 0 -12rem;
+      padding: 0;
+      display: flex;
+      list-style-type: none;
+      @media (max-width: $lg) {
+        flex-wrap: wrap;
+      }
+    }
+    &-item {
+      margin: 0 12rem;
+      padding: 0;
+      @media (max-width: $lg) {
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+      }
+    }
+    &-link {
+      @extend %area-click;
+      transition: $transition;
+      &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+          color: $accentColor;
+        }
+      }
+    }
+  }
+  &__btn-appeal {
+    @media (max-width: $lg) {
+      margin: var(--gap-fluid) 0;
+    }
+  }
+  &__copyright {
+    margin: $rhythmLg12 0 0;
+    font-size: var(--fs-6);
+    color: $silverColor;
+  }
+}

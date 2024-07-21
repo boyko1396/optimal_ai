@@ -1,0 +1,29 @@
+.page {
+  padding: $rhythmLg4 0 $rhythmLg5;
+  &__container {
+  }
+  &__breadcrumbs {
+    margin: 0 0 26rem;
+  }
+  &__title {
+    margin: 0 0 $rhythmLg3;
+  }
+  &__privacy {
+    &-row {
+    }
+    &-col {
+      &--content {
+        @media (max-width: $sm) {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+  &__text {
+    color: $blackFullColor;
+  }
+  &__contacts {
+    margin-top: -10rem;
+  }
+}

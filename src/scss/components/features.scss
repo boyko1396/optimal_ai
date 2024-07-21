@@ -1,0 +1,60 @@
+.features {
+  padding: $rhythmLg1 0 $rhythmLg13;
+  @media (max-width: $md) {
+    padding: 80rem 0 40rem;
+  }
+  &__container {
+  }
+  &__title {
+    margin-bottom: $rhythmLg2;
+    @media (max-width: $sm) {
+      margin-bottom: 24rem;
+    }
+  }
+  &__list {
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: var(--gap-fluid);
+      }
+      &:nth-child(even) {
+        .features-card__content {
+          margin-left: 0;
+          border-top-left-radius: 0;
+          border-top-right-radius: var(--active-radius);
+          &:before,
+          &:after {
+            transform: scaleX(-1);
+          }
+          &:before {
+            background-image: radial-gradient(circle at top left, transparent 46%, var(--active-color) 50%);
+            background-size: calc(var(--active-radius) * 1.5) calc(var(--active-radius) * 1.5);
+            right: initial;
+            left: 100%;
+          }
+          &:after {
+            background-image: radial-gradient(circle at top left, transparent 46%, var(--active-color) 50%);
+            background-size: calc(var(--active-radius) * 1.5) calc(var(--active-radius) * 1.5);
+            right: initial;
+            left: 0;
+          }
+        }
+      }
+    }
+    &-card {
+      margin-bottom: var(--gap-fluid);
+    }
+    &-marquee {
+      height: 60rem;
+      position: relative;
+      &-item {
+        background: $lightGreyColor;
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

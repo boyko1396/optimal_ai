@@ -1,0 +1,100 @@
+$siteResolution: 1px;
+$mainFont: 'Montserrat';
+$mainWeight: 400;
+$lineHeight1: 1.3;
+$lineHeight2: 1.2;
+$lineHeight3: 1.25;
+$lineHeight4: 1;
+$lineHeightDefault: $lineHeight1;
+
+$containerWidthMd: 1248rem;
+
+$gap: 12rem;
+$gapFluid: 24rem;
+
+$radiusSm: 10rem;
+$radiusMd: 20rem;
+
+$blurSm: 5px;
+
+$rhythmLg1: 120rem;
+$rhythmLg2: 40rem;
+$rhythmLg3: 20rem;
+$rhythmLg4: 16rem;
+$rhythmLg5: 80rem;
+$rhythmLg6: 48rem;
+$rhythmLg7: 12rem;
+$rhythmLg8: 32rem;
+$rhythmLg9: 10rem;
+$rhythmLg10: 25rem;
+$rhythmLg11: 14rem;
+$rhythmLg12: 24rem;
+$rhythmLg13: 60rem;
+$rhythmLg14: 8rem;
+$rhythmLg15: 4rem;
+$rhythmLg16: 86rem;
+$rhythmLg17: 36rem;
+$rhythmLg18: 19rem;
+$rhythmLg19: 48rem;
+$rhythmLg20: 130rem;
+
+$whiteColor: #ffffff;
+$blackColor: #1B1B1B;
+$blackFullColor: #000000;
+$greyColor: #F3F3F3;
+$lightGreyColor: #E3E3E3;
+$mediumGreyColor: #9A9A9A;
+$blueColor: #0057FF;
+$silverColor: #B0B0B0;
+$redColor: #D92D20;
+$lightRedColor: #FEE4E2;
+$accentColor: $blueColor;
+
+$gradientBlackCard1: linear-gradient(180deg, rgba($blackFullColor, .4) 45%, rgba($blackFullColor, 0) 100%);
+
+$fontFamily: $mainFont, Open Sans, sans-serif, Arial;
+$fontColor: $blackColor;
+$fontWeight: $mainWeight;
+
+$transition: all .4s 0ms;
+
+$xl: 1340px;
+$xl-mf: $xl + 1;
+
+$lg: 1199px;
+$lg-mf: $lg + 1;
+
+$md: 991px;
+$md-mf: $md + 1;
+
+$sm: 767px;
+$sm-mf: $sm + 1;
+
+$xs: 576px;
+$xs-mf: $xs + 1;
+
+:root {
+  --fs-default: 16rem;
+  --fs-1: 40rem;
+  --fs-2: 24rem;
+  --fs-3: 18rem;
+  --fs-4: 16rem;
+  --fs-5: 14rem;
+  --fs-6: 12rem;
+
+  --gap: 12rem;
+  --gap-: -12rem;
+  --gap-fluid: 24rem;
+  --gap-fluid-: -24rem;
+  --gap-container: var(--gap-fluid);
+  --gap-container-: var(--gap-fluid-);
+  @media (max-width: $lg) {
+  }
+  @media (max-width: $sm) {
+    --fs-1: 25rem;
+    --fs-2: 20rem;
+
+    --gap-container: 16rem;
+    --gap-container-: -16rem;
+  }
+}

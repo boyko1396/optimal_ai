@@ -1,0 +1,116 @@
+.header {
+  &__container {
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    flex-shrink: 0;
+  }
+  &__aside {
+    @media (max-width: $md) {
+      background: $blackColor;
+      width: 300rem;
+      padding: 36rem 16rem 32rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      transition: $transition;
+      transition-property: transform, visibility, opacity;
+      z-index: 998;
+    }
+    &:not(.is-show) {
+      @media (max-width: $md) {
+        transform: translateX(100vw);
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-logo {
+    }
+  }
+  &__action {
+    display: flex;
+    @media (max-width: $md) {
+      padding-top: 40rem;
+      display: flex;
+      flex-direction: column;
+    }
+    &-item {
+      margin-left: 10rem;
+      @media (max-width: $md) {
+        width: 100%;
+        margin-top: 12rem;
+        margin-left: 0;
+      }
+    }
+    &-btn {
+      @media (max-width: $md) {
+        width: 100%;
+      }
+    }
+  }
+  &__toggle {
+    @extend %area-click, %btn-reset;
+    @media (max-width: $md) {
+      width: 30rem;
+      height: 30rem;
+      margin: 0 0 0 auto;
+      display: flex;
+      flex-shrink: 0;
+      color: $whiteColor;
+      position: relative;
+      transition: $transition;
+    }
+    .u-icon {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &.js-header-toggle-open {
+      &:before {
+        transition: $transition;
+        transition-property: opacity, visibility;
+      }
+      &:not(.is-active) {
+        &:before {
+          pointer-events: none;
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      &:before {
+        @media (max-width: $md) {
+          background: rgba($blackFullColor, .75);
+          backdrop-filter: blur(3px);
+          content: '';
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 996;
+        }
+      }
+    }
+    &.js-header-toggle-close {
+      color: $mediumGreyColor;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.login-page {
+  padding: $rhythmLg13 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  @media (max-width: $lg) {
+    padding: 40rem 0;
+  }
+  &__container {
+  }
+  &__block {
+  }
+}
