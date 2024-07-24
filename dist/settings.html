@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.min.css??=v=20240724151920">
   <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
@@ -21,32 +21,34 @@
     <div id="root" class="site">
       <div class="site__inner">
         <main role="main" class="site__main">
-          <!-- chat-layout BEGIN -->
+          
           <div class="chat-layout">
             <div class="chat-layout__container">
               <div class="chat-layout__inner">
+                
                 <header class="chat-header-mobile">
-                  <div class="chat-header-mobile__container container container--size-md">
-                    <div class="chat-header-mobile__inner">
-                      <button type="button" class="chat-header-mobile__toggle js-chat-menu-open">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#menu-open"></use>
-                        </svg>
-                      </button>
-                      <a href="chat_new.html" class="btn btn--size-xs btn--theme-white chat-header-mobile__btn-new-chat">
-                        <span class="btn__inner">
-                          <span class="btn__title">Новый чат</span>
-                          <span class="btn__icon btn__icon--dir-rtl">
-                            <svg class="u-icon">
-                              <use xlink:href="images/icons/icons.svg#plus-type-2"></use>
-                            </svg>
-                          </span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </header>
-                <!-- chat-aside BEGIN -->
+  <div class="chat-header-mobile__container container container--size-md">
+    <div class="chat-header-mobile__inner">
+      <button type="button" class="chat-header-mobile__toggle js-chat-menu-open">
+        <svg class="u-icon">
+          <use xlink:href="images/icons/icons.svg#menu-open"></use>
+        </svg>
+      </button>
+      <a href="chat.html" class="btn btn--size-xs btn--theme-white chat-header-mobile__btn-new-chat">
+        <span class="btn__inner">
+          <span class="btn__title">Новый чат</span>
+          <span class="btn__icon btn__icon--dir-rtl">
+            <svg class="u-icon">
+              <use xlink:href="images/icons/icons.svg#plus-type-2"></use>
+            </svg>
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+                
+                
                 <aside class="chat-aside chat-layout__aside">
   <div class="chat-aside__inner">
     <header class="chat-aside__header">
@@ -58,7 +60,7 @@
           <use xlink:href="images/icons/icons.svg#close"></use>
         </svg>
       </button>
-      <a href="chat_new.html" class="btn btn--size-lg btn--theme-accent-outline chat-aside__header-btn-new-chat">
+      <a href="chat.html" class="btn btn--size-lg btn--theme-accent-outline chat-aside__header-btn-new-chat">
         <span class="btn__inner">
           <span class="btn__title">Новый чат</span>
           <span class="btn__icon btn__icon--dir-rtl">
@@ -70,104 +72,126 @@
       </a>
       <ul class="chat-aside__header-nav">
         <li class="chat-aside__header-nav-item">
-          <button type="button" class="chat-aside__header-nav-btn is-active">Инструменты</button>
+          <button type="button" class="chat-aside__header-nav-btn is-active js-chat-tab-nav" data-tab-nav="chat-tools">Инструменты</button>
         </li>
         <li class="chat-aside__header-nav-item">
-          <button type="button" class="chat-aside__header-nav-btn">История</button>
+          <button type="button" class="chat-aside__header-nav-btn js-chat-tab-nav" data-tab-nav="chat-history">История</button>
+        </li>
+      </ul>
+      <ul class="chat-aside__header-nav js-chat-subnav">
+        <li class="chat-aside__header-nav-item">
+          <button type="button" class="chat-aside__header-nav-btn is-active js-chat-tabsub-nav" data-tab-nav="chat-history-list">История чатов</button>
+        </li>
+        <li class="chat-aside__header-nav-item">
+          <button type="button" class="chat-aside__header-nav-btn js-chat-tabsub-nav" data-tab-nav="chat-history-tools">Инструменты</button>
         </li>
       </ul>
     </header>
     <div class="chat-aside__body hide-scrollbar">
-      <div class="chat-aside__body-list">
-        <button type="button" class="chat-aside__body-list-card chat-services-card chat-services-card--theme-grey">
-          <div class="chat-services-card__inner">
-            <picture class="chat-services-card__picture">
-              <source srcset="images/chat-services-card-1.webp, images/chat-services-card-1@2x.webp 2x" type="image/webp">
-              <img src="images/chat-services-card-1.png" srcset="images/chat-services-card-1.png, images/chat-services-card-1@2x.png 2x" alt="Генератор изображений">
-            </picture>
-            <div class="chat-services-card__content">
-              <p class="font-size-3 chat-services-card__title">Генератор изображений</p>
-              <div class="u-content chat-services-card__text">
-                <p>Превратите слова в изображения</p>
+      <div class="chat-aside__body-tab-content js-chat-tab-content is-show" data-tab-content="chat-tools">
+        <div class="chat-aside__body-list">
+          <a href="chat_images.html" class="chat-aside__body-list-card chat-services-card chat-services-card--theme-grey">
+            <div class="chat-services-card__inner">
+              <picture class="chat-services-card__picture">
+                <source srcset="images/chat-services-card-1.webp, images/chat-services-card-1@2x.webp 2x" type="image/webp">
+                <img src="images/chat-services-card-1.png" srcset="images/chat-services-card-1.png, images/chat-services-card-1@2x.png 2x" alt="Генератор изображений">
+              </picture>
+              <div class="chat-services-card__content">
+                <p class="font-size-3 chat-services-card__title">Генератор изображений</p>
+                <div class="u-content chat-services-card__text">
+                  <p>Превратите слова в изображения</p>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
-        <button type="button" data-modal="popup-chat-article-info" class="chat-aside__body-list-card chat-services-card chat-services-card--theme-grey">
-          <div class="chat-services-card__inner">
-            <div class="chat-services-card__picture">
-              <svg class="u-icon">
-                <use xlink:href="images/icons/icons.svg#upload-file"></use>
-              </svg>
-            </div>
-            <div class="chat-services-card__content">
-              <p class="font-size-3 chat-services-card__title">Загрузи и спроси</p>
-              <div class="u-content chat-services-card__text">
-                <p>Спросите что угодно о документе</p>
+          </a>
+          <button type="button" data-modal="popup-chat-article-info" class="chat-aside__body-list-card chat-services-card chat-services-card--theme-grey">
+            <div class="chat-services-card__inner">
+              <div class="chat-services-card__picture">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#upload-file"></use>
+                </svg>
+              </div>
+              <div class="chat-services-card__content">
+                <p class="font-size-3 chat-services-card__title">Загрузи и спроси</p>
+                <div class="u-content chat-services-card__text">
+                  <p>Спросите что угодно о документе</p>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
-        <button type="button" data-modal="popup-chat-link-youtube" class="chat-aside__body-list-card chat-services-card chat-services-card--theme-grey">
-          <div class="chat-services-card__inner">
-            <div class="chat-services-card__picture">
-              <svg class="u-icon">
-                <use xlink:href="images/icons/icons.svg#youtube-color"></use>
-              </svg>
-            </div>
-            <div class="chat-services-card__content">
-              <p class="font-size-3 chat-services-card__title">YouTube и спроси</p>
-              <div class="u-content chat-services-card__text">
-                <p>Спросите что угодно о видео  с YouTube</p>
+          </button>
+          <button type="button" data-modal="popup-chat-link-youtube" class="chat-aside__body-list-card chat-services-card chat-services-card--theme-grey">
+            <div class="chat-services-card__inner">
+              <div class="chat-services-card__picture">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#youtube-color"></use>
+                </svg>
+              </div>
+              <div class="chat-services-card__content">
+                <p class="font-size-3 chat-services-card__title">YouTube и спроси</p>
+                <div class="u-content chat-services-card__text">
+                  <p>Спросите что угодно о видео  с YouTube</p>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
-        <button type="button" data-modal="popup-chat-youtube" class="chat-aside__body-list-card chat-services-card chat-services-card--theme-grey">
-          <div class="chat-services-card__inner">
-            <div class="chat-services-card__picture">
-              <svg class="u-icon">
-                <use xlink:href="images/icons/icons.svg#youtube-color"></use>
-              </svg>
-            </div>
-            <div class="chat-services-card__content">
-              <p class="font-size-3 chat-services-card__title">Краткое содержание YouTube-видео</p>
-              <div class="u-content chat-services-card__text">
-                <p>Получите детальную выжимку из видео с YouTube</p>
+          </button>
+          <button type="button" data-modal="popup-chat-youtube" class="chat-aside__body-list-card chat-services-card chat-services-card--theme-grey">
+            <div class="chat-services-card__inner">
+              <div class="chat-services-card__picture">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#youtube-color"></use>
+                </svg>
+              </div>
+              <div class="chat-services-card__content">
+                <p class="font-size-3 chat-services-card__title">Краткое содержание YouTube-видео</p>
+                <div class="u-content chat-services-card__text">
+                  <p>Получите детальную выжимку из видео с YouTube</p>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
-        <button type="button" data-modal="popup-chat-article" class="chat-aside__body-list-card chat-services-card chat-services-card--theme-grey">
-          <div class="chat-services-card__inner">
-            <div class="chat-services-card__picture">
-              <svg class="u-icon">
-                <use xlink:href="images/icons/icons.svg#file"></use>
-              </svg>
-            </div>
-            <div class="chat-services-card__content">
-              <p class="font-size-3 chat-services-card__title">Краткое содержание статьи</p>
-              <div class="u-content chat-services-card__text">
-                <p>Получите детальную выжимку из статьи</p>
+          </button>
+          <button type="button" data-modal="popup-chat-article" class="chat-aside__body-list-card chat-services-card chat-services-card--theme-grey">
+            <div class="chat-services-card__inner">
+              <div class="chat-services-card__picture">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#file"></use>
+                </svg>
+              </div>
+              <div class="chat-services-card__content">
+                <p class="font-size-3 chat-services-card__title">Краткое содержание статьи</p>
+                <div class="u-content chat-services-card__text">
+                  <p>Получите детальную выжимку из статьи</p>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
-        <button type="button" data-modal="popup-chat-link" class="chat-aside__body-list-card chat-services-card chat-services-card--theme-grey">
-          <div class="chat-services-card__inner">
-            <div class="chat-services-card__picture">
-              <svg class="u-icon">
-                <use xlink:href="images/icons/icons.svg#earth"></use>
-              </svg>
-            </div>
-            <div class="chat-services-card__content">
-              <p class="font-size-3 chat-services-card__title">Вставь ссылку и спроси</p>
-              <div class="u-content chat-services-card__text">
-                <p>Спросите или найдите что угодно на сайте</p>
+          </button>
+          <button type="button" data-modal="popup-chat-link" class="chat-aside__body-list-card chat-services-card chat-services-card--theme-grey">
+            <div class="chat-services-card__inner">
+              <div class="chat-services-card__picture">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#earth"></use>
+                </svg>
+              </div>
+              <div class="chat-services-card__content">
+                <p class="font-size-3 chat-services-card__title">Вставь ссылку и спроси</p>
+                <div class="u-content chat-services-card__text">
+                  <p>Спросите или найдите что угодно на сайте</p>
+                </div>
               </div>
             </div>
+          </button>
+        </div>
+      </div>
+      <div class="chat-aside__body-tab-content js-chat-tab-content" data-tab-content="chat-history">
+        <div class="chat-aside__body-tabsub-content js-chat-tabsub-content is-show" data-tab-content="chat-history-list">
+          <div class="chat-aside__body-history">
+            <p class="font-size-3 chat-aside__body-history-empty">У вас нет начатых чатов</p>
           </div>
-        </button>
+        </div>
+        <div class="chat-aside__body-tabsub-content js-chat-tabsub-content" data-tab-content="chat-history-tools">
+          <div class="chat-aside__body-history">
+            <p class="font-size-3 chat-aside__body-history-empty">У вас нет начатых чатов</p>
+          </div>
+        </div>
       </div>
     </div>
     <footer class="chat-aside__footer">
@@ -180,7 +204,7 @@
                   <use xlink:href="images/icons/icons.svg#chat"></use>
                 </svg>
               </span>
-              <span class="btn__title">Новый чат</span>
+              <span class="btn__title">Чат</span>
             </span>
           </a>
         </li>
@@ -200,7 +224,7 @@
     </footer>
   </div>
 </aside>
-                <!-- chat-aside END -->
+                
                 <div class="chat-layout__main settings-user">
                   <div class="u-scrollbar settings-user__inner">
                     <h1 class="font-size-2 settings-user__title">Настройки</h1>
@@ -584,7 +608,7 @@
                               <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
                                 <div class="faq-card__inner">
                                   <div class="u-content faq-card__text">
-                                    <p>Нейросеть – это мощный инструмент на базе искусственного интеллекта, который помогает вам создавать тексты, изображения и преобразовывать аудио в текст. Она обучена на огромном количестве данных и способна генерировать высококачественные результаты за считанные секунды.</p>
+                                    <p>Чтобы отменить подписку, зайдите в раздел «Управлять подпиской» на странице настроек и нажмите на кнопку «Отменить подписку». Ваша подписка будет отменена в конце текущего периода подписки, что приведет к прекращению вашего премиум-члена. После отмены подписки с вас не будут взиматься никакие дополнительные платежи.</p>
                                   </div>
                                 </div>
                               </div>
@@ -603,7 +627,7 @@
                               <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
                                 <div class="faq-card__inner">
                                   <div class="u-content faq-card__text">
-                                    <p>Нейросеть – это мощный инструмент на базе искусственного интеллекта, который помогает вам создавать тексты, изображения и преобразовывать аудио в текст. Она обучена на огромном количестве данных и способна генерировать высококачественные результаты за считанные секунды.</p>
+                                    <p>Если вы хотите запросить возврат денег, отправьте письмо в нашу службу поддержки с описанием вашего запроса на возврат. Ваш запрос на возврат будет обработан в течение 5-10 рабочих дней, если ваша ситуация соответствует нашей политике возврата.</p>
                                   </div>
                                 </div>
                               </div>
@@ -617,7 +641,7 @@
               </div>
             </div>
           </div>
-          <!-- chat-layout END -->
+          
         </main>
       </div>
       <div class="popup" data-popup="popup-registration" data-close-overlay>
@@ -628,9 +652,7 @@
           <div class="popup__login-col row__col popup__login-col--media">
             <div class="login-block__media">
               <picture class="radius-20 login-block__hero">
-                <!--<source 
-                  srcset="images/login-page-hero.webp 1x, images/login-page-hero@2x.webp 2x" 
-                  type="image/webp">-->
+                
                 <img src="images/login-page-hero.jpg" srcset="images/login-page-hero.jpg, images/login-page-hero@2x.jpg 2x" alt="Контакты">
               </picture>
               <div class="login-block__appeal">
@@ -667,7 +689,7 @@
               <div class="u-content login-block__text">
                 <p>Отправьте свой запрос<br>и&nbsp;получите ответ за секунды</p>
               </div>
-              <h2 class="font-size-4 login-block__subtitle">Продолжите с одним из вариантов:</h2>
+              <h2 class="font-size-4 login-block__subtitle">Продолжите с одним из&nbsp;вариантов:</h2>
               <div class="login-block__sc">
                 <button type="button" class="btn btn--size-md btn--theme-grey login-block__sc-btn">
                   <span class="btn__inner">
@@ -984,6 +1006,6 @@
 </div>
     </div>
 
-    <script src="js/app.min.js"></script>
+    <script src="js/app.min.js??=v=20240724151920"></script>
   </body>
 </html>

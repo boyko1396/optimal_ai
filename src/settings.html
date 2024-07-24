@@ -12,29 +12,11 @@
           <div class="chat-layout">
             <div class="chat-layout__container">
               <div class="chat-layout__inner">
-                <header class="chat-header-mobile">
-                  <div class="container container--size-md chat-header-mobile__container">
-                    <div class="chat-header-mobile__inner">
-                      <button type="button" class="js-chat-menu-open chat-header-mobile__toggle">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#menu-open"></use>
-                        </svg>
-                      </button>
-                      <a href="chat_new.html" class="btn btn--size-xs btn--theme-white chat-header-mobile__btn-new-chat">
-                        <span class="btn__inner">
-                          <span class="btn__title">Новый чат</span>
-                          <span class="btn__icon btn__icon--dir-rtl">
-                            <svg class="u-icon">
-                              <use xlink:href="images/icons/icons.svg#plus-type-2"></use>
-                            </svg>
-                          </span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </header>
+                <!-- chat-header-mobile BEGIN -->
+                @@include('html/components/chat-header-mobile.html')
+                <!-- chat-header-mobile END -->
                 <!-- chat-aside BEGIN -->
-                @@include('html/components/chat-aside.html', {
+                @@include('html/components/chat-aside-settings.html', {
                   'el': 'chat-layout__aside'
                 })
                 <!-- chat-aside END -->
@@ -421,7 +403,7 @@
                               <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
                                 <div class="faq-card__inner">
                                   <div class="u-content faq-card__text">
-                                    <p>Нейросеть – это мощный инструмент на базе искусственного интеллекта, который помогает вам создавать тексты, изображения и преобразовывать аудио в текст. Она обучена на огромном количестве данных и способна генерировать высококачественные результаты за считанные секунды.</p>
+                                    <p>Чтобы отменить подписку, зайдите в раздел «Управлять подпиской» на странице настроек и нажмите на кнопку «Отменить подписку». Ваша подписка будет отменена в конце текущего периода подписки, что приведет к прекращению вашего премиум-члена. После отмены подписки с вас не будут взиматься никакие дополнительные платежи.</p>
                                   </div>
                                 </div>
                               </div>
@@ -440,7 +422,7 @@
                               <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
                                 <div class="faq-card__inner">
                                   <div class="u-content faq-card__text">
-                                    <p>Нейросеть – это мощный инструмент на базе искусственного интеллекта, который помогает вам создавать тексты, изображения и преобразовывать аудио в текст. Она обучена на огромном количестве данных и способна генерировать высококачественные результаты за считанные секунды.</p>
+                                    <p>Если вы хотите запросить возврат денег, отправьте письмо в нашу службу поддержки с описанием вашего запроса на возврат. Ваш запрос на возврат будет обработан в течение 5-10 рабочих дней, если ваша ситуация соответствует нашей политике возврата.</p>
                                   </div>
                                 </div>
                               </div>

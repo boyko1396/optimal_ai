@@ -66,10 +66,17 @@
       &--media {
         max-width: 60%;
         flex-basis: 60%;
+        @media (max-width: $sm) {
+          display: none;
+        }
       }
       &--content {
         max-width: 40%;
         flex-basis: 40%;
+        @media (max-width: $sm) {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
       }
     }
     &-content {
@@ -79,6 +86,13 @@
       flex-direction: column;
       justify-content: center;
       color: $blackFullColor;
+      @media (max-width: $lg) {
+        padding-top: 48rem;
+        padding-bottom: 48rem;
+      }
+      @media (max-width: $sm) {
+        padding: 32rem 16rem;
+      }
     }
   }
   &__chat-form {

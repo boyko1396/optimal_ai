@@ -23,7 +23,12 @@
       text-align: center;
     }
     &-title {
+      min-height: 1.2em;
       margin-bottom: $rhythmLg4;
+      &:after {
+        content: '\007C';
+        animation: cursor-blink .7s infinite;
+      }
     }
     &-text {
       margin-bottom: $rhythmLg8;

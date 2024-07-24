@@ -27,6 +27,14 @@
       padding: 0;
       display: flex;
       list-style-type: none;
+      &+& {
+        margin-top: $rhythmLg8;
+      }
+      &.js-chat-subnav {
+        &:not(.is-show) {
+          display: none;
+        }
+      }
       &-item {
         margin: 0;
         padding: 0;
@@ -73,9 +81,19 @@
     }
   }
   &__body {
+    margin: 0 $rhythmLg12*-1;
+    padding: 0 $rhythmLg12;
+    flex-grow: 1;
     overflow-y: auto;
-    &::scrollbar {
-      display: none;
+    &-tab-content {
+      &:not(.is-show) {
+        display: none;
+      }
+    }
+    &-tabsub-content {
+      &:not(.is-show) {
+        display: none;
+      }
     }
     &-list {
       &-card {
@@ -85,9 +103,23 @@
         }
       }
     }
+    &-history {
+      &-item {
+        margin: 0 $rhythmLg12*-1;
+        &:not(:last-child) {
+          margin-bottom: 10rem;
+        }
+      }
+      &-empty {
+        margin: 0;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
   }
   &__footer {
     background: $whiteColor;
+    margin-top: auto;
     padding-top: $rhythmLg12;
     &-nav {
       margin: 0;
