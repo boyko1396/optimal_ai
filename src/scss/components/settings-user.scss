@@ -6,6 +6,10 @@
     @media (max-width: $md) {
       padding-top: 0;
     }
+    @media (max-width: $sm) {
+      padding-right: 16rem;
+      padding-left: 16rem;
+    }
   }
   &__title {
     margin: 0 0 $rhythmLg3;
