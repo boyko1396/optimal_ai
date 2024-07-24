@@ -13,6 +13,9 @@
   overflow-x: hidden;
   overflow-y: scroll;
   z-index: 2000;
+  @media (max-width: $md) {
+    padding-top: 70rem;
+  }
   &:not(.is-open) {
     visibility: hidden;
     opacity: 0;
@@ -27,13 +30,29 @@
     align-items: center;
     min-height: 100%;
   }
+  &__btn-close {
+    @extend %area-click, %btn-reset;
+    width: 24rem;
+    height: 24rem;
+    margin-bottom: 24rem;
+    color: $mediumGreyColor;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    @media (min-width: $md-mf) {
+      display: none;
+    }
+    .u-icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
   &__content {
     width: 100%;
     max-width: 480rem;
     margin: 0 auto;
     transition: transform .3s ease-in-out, opacity .3s ease-in-out;
     position: relative;
-    overflow: hidden;
     &--size {
       &-sm {
         max-width: 586rem;
@@ -57,6 +76,9 @@
   }
   &__inner {
     padding: $rhythmLg6 $rhythmLg12;
+    @media (max-width: $md) {
+      padding: 32rem 16rem;
+    }
   }
   &__login {
     &-row {
@@ -125,15 +147,24 @@
     }
     &-btn {
       min-width: 220rem;
+      @media (max-width: $sm) {
+        width: 100%;
+      }
     }
   }
   &__form {
     &-wrapper {
       padding: $rhythmLg5 $rhythmLg6;
+      @media (max-width: $md) {
+        padding: 32rem 16rem;
+      }
     }
     &-title {
       margin: 0 0 $rhythmLg8;
       font-weight: 600;
+      @media (max-width: $md) {
+        text-align: center;
+      }
     }
     &-input {
       margin: 0 0 $rhythmLg14;
@@ -142,9 +173,30 @@
       max-width: 100%;
       margin: $rhythmLg8 0 0 0;
       display: table;
+      @media (max-width: $sm) {
+        display: block;
+      }
+      .btn-group__inner {
+        @media (max-width: $sm) {
+          width: 100%;
+        }
+      }
+      .btn-group__col {
+        @media (max-width: $sm) {
+          flex-grow: 1;
+        }
+      }
+      .btn {
+        @media (max-width: $sm) {
+          width: 100%;
+        }
+      }
     }
     &-btn {
       min-width: 220rem;
+      @media (max-width: $sm) {
+        width: 100%;
+      }
       &-remove {
         min-width: 104rem;
       }

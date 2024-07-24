@@ -1570,7 +1570,21 @@
     font-size: var(--fs-6);
     line-height: $lineHeight4;
     color: $blackColor;
+    @media (max-width: $sm) {
+      font-size: var(--fs-7);
+    }
     &-text {
+      &:first-child {
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+      }
+      strong {
+        @media (max-width: $sm) {
+          display: block;
+        }
+      }
     }
   }
 }
