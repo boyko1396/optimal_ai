@@ -18,6 +18,8 @@ import Tabs from './modules/Tabs.js';
 import TabsChat from './modules/TabsChat.js';
 import TabsChatSub from './modules/TabsChatSub.js';
 import FaqCard from './modules/FaqCard.js';
+import { ChatHint } from './modules/ChatHint.js';
+import { ChatHintButton } from './modules/ChatHintButton.js';
 
 BaseHelpers.checkWebpSupport();
 BaseHelpers.addTouchClass();
@@ -41,67 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
   new TabsChatSub('.js-chat-tabsub-nav', '.js-chat-tabsub-content');
   // faq card
   new FaqCard();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const hintWrapper = document.querySelector('.js-chat-hint-wrapper');
-  const hintButtons = document.querySelectorAll('.js-chat-hint');
-  const dropdowns = document.querySelectorAll('.js-chat-hint-dropdown');
-  let activeDropdownIndex = -1;
-
-  hintButtons.forEach((hintButton, index) => {
-    hintButton.addEventListener('mouseenter', () => {
-      hintButtons.forEach(btn => btn.classList.remove('is-active'));
-      dropdowns.forEach(dropdown => dropdown.classList.remove('is-show'));
-
-      if (dropdowns[index]) {
-        dropdowns[index].classList.add('is-show');
-        hintButton.classList.add('is-active');
-        activeDropdownIndex = index;
-      }
-    });
-
-    hintButton.addEventListener('mouseleave', () => {
-      setTimeout(() => {
-        if (activeDropdownIndex !== index) {
-          hintButton.classList.remove('is-active');
-          if (dropdowns[index]) {
-            dropdowns[index].classList.remove('is-show');
-          }
-        }
-      }, 100);
-    });
-  });
-
-  dropdowns.forEach((dropdown, index) => {
-    dropdown.addEventListener('mouseenter', () => {
-      activeDropdownIndex = index;
-      dropdown.classList.add('is-show');
-    });
-
-    dropdown.addEventListener('mouseleave', () => {
-      dropdown.classList.remove('is-show');
-      activeDropdownIndex = -1;
-    });
-  });
-
-  hintWrapper.addEventListener('mouseleave', () => {
-    hintButtons.forEach(btn => btn.classList.remove('is-active'));
-    dropdowns.forEach(dropdown => dropdown.classList.remove('is-show'));
-    activeDropdownIndex = -1;
-  });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const hintButtons = document.querySelectorAll('.js-chat-hint-btn');
-  const textarea = document.querySelector('.js-chat-textarea');
-
-  hintButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const newValue = button.getAttribute('data-chat-hint');
-      if (textarea) {
-        textarea.value = newValue;
-      }
-    });
-  });
+  // chat hint
+  new ChatHint('.js-chat-hint-wrapper', '.js-chat-hint', '.js-chat-hint-dropdown');
+  new ChatHintButton('.js-chat-hint-btn', '.js-chat-textarea');
 });
