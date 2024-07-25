@@ -89,6 +89,8 @@ $xs-mf: $xs + 1;
   --gap-fluid-: -24rem;
   --gap-container: var(--gap-fluid);
   --gap-container-: var(--gap-fluid-);
+
+  --vh: 1vh;
   @media (max-width: $lg) {
   }
   @media (max-width: $sm) {
