@@ -47,3 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
   new ChatHint('.js-chat-hint-wrapper', '.js-chat-hint', '.js-chat-hint-dropdown');
   new ChatHintButton('.js-chat-hint-btn', '.js-chat-textarea');
 });
+
+function setViewportHeight() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+window.addEventListener('resize', setViewportHeight);
+setViewportHeight();
