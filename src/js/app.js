@@ -7,7 +7,7 @@
  * If we want to add a module, we should uncomment it.
  */
 
-// support webp, identify device
+import { SetVH } from './modules/SetVH.js';
 import BaseHelpers from './helpers/BaseHelpers.js';
 import HeaderBtnToggle from './modules/HeaderBtnToggle.js';
 import ChatToggleMenu from './modules/ChatToggleMenu.js';
@@ -20,6 +20,9 @@ import TabsChatSub from './modules/TabsChatSub.js';
 import FaqCard from './modules/FaqCard.js';
 import { ChatHint } from './modules/ChatHint.js';
 import { ChatHintButton } from './modules/ChatHintButton.js';
+
+// set vh
+SetVH();
 
 BaseHelpers.checkWebpSupport();
 BaseHelpers.addTouchClass();
