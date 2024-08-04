@@ -1434,6 +1434,7 @@
     font-weight: 600;
     outline: none;
     transition: $transition;
+    transition-property: border-color;
     &--size {
       &-md {
         min-height: 48rem;

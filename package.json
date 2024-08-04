@@ -78,6 +78,8 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "inputmask": "^5.0.9",
+    "intl-tel-input": "^23.8.0",
     "swiper": "^11.1.5"
   }
 }
