@@ -139,6 +139,9 @@
       }
     }
   }
+  &__form + &__privacy {
+    margin-top: 12rem;
+  }
   &__privacy {
     margin: 0;
   }
@@ -156,6 +159,8 @@
   }
   &__footer {
     margin: $rhythmLg7 0 0;
+    font-weight: normal;
+    color: rgba($blackColor, .75);
     @media (max-width: $sm) {
       display: flex;
       flex-direction: column;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   @@include('html/head.html', {
-    'title': 'Optimal AI - Login email'
+    'title': 'Optimal AI - Registration email'
   })
   <body class="u-scrollbar">
 
@@ -53,8 +53,8 @@
                 </div>
                 <div class="row__col--6 login-block__col login-block__col--content">
                   <div class="bg-white padding-x-48 padding-y-80 radius-20 login-block__content">
-                    <h1 class="font-size-2 login-block__title">Войдите в свой аккаунт</h1>
-                    <h2 class="font-size-4 color-grey login-block__subtitle">Войдите через электронную почту</h2>
+                    <h1 class="font-size-2 login-block__title">Создайте аккаунт</h1>
+                    <h2 class="font-size-4 login-block__subtitle">Зарегистрируйтесь через электронную почту</h2>
                     <form action="#" class="login-block__form">
                       <div class="u-input login-block__form-input">
                         <label class="u-input__label">
@@ -66,16 +66,16 @@
                           <input type="password" name="password" class="u-input__el u-input__el--type-text u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Пароль">
                         </label>
                       </div>
-                      <p class="font-size-4 login-block__form-restore">
-                        <a href="restore.html">Забыли пароль?</a>
-                      </p>
                       <button type="submit" class="btn btn--size-lg btn--theme-accent login-block__form-btn" disabled>
                         <span class="btn__inner">
-                          <span class="btn__title">Войти</span>
+                          <span class="btn__title">Зарегистрироваться</span>
                         </span>
                       </button>
                     </form>
-                    <p class="font-size-4 login-block__footer">Нет аккаунта? <a href="registration.html"><strong>Зарегистрироваться</strong></a></p>
+                    <div class="u-content form-privacy login-block__privacy">
+                      <p>Создавая аккаунт, вы соглашаетесь с нашими <a href="terms.html" target="_blank">Условиями использования</a> и&nbsp;<a href="privacy.html" target="_blank">Политикой конфиденциальности</a>.</p>
+                    </div>
+                    <p class="font-size-4 login-block__footer">Уже есть аккаунт? <a href="login.html"><strong>Войти</strong></a></p>
                   </div>
                 </div>
               </div>
